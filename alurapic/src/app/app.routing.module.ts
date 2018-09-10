@@ -9,31 +9,31 @@ import { SignInComponent } from './home/signin/signin.component';
 import { AuthGuard } from './core/auth/auth.guard';
 
 const routes: Routes = [
-    { 
+    {
         path: '',
         component: SignInComponent,
         canActivate: [AuthGuard]
-    },    
-    { 
-        path: 'user/:userName', 
+    },
+    {
+        path: 'user/:userName',
         component: PhotoListComponent,
         resolve: {
             photos: PhotoListResolver
         }
     },
-    { 
-        path: 'p/add', 
-        component: PhotoFormComponent 
+    {
+        path: 'p/add',
+        component: PhotoFormComponent
     },
-    { 
-        path: '**', 
-        component: NotFoundComponent 
-    }  
+    {
+        path: '**',
+        component: NotFoundComponent
+    }
 ];
 
 @NgModule({
-    imports: [ 
-        RouterModule.forRoot(routes) 
+    imports: [
+        RouterModule.forRoot(routes)
     ],
     exports: [ RouterModule ]
 })

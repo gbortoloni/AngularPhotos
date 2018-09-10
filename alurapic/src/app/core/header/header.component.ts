@@ -5,16 +5,17 @@ import { User } from '../user/user';
 import { Router } from '@angular/router';
 
 @Component({
+    // tslint:disable-next-line:component-selector
     selector: 'ap-header',
     templateUrl: './header.component.html'
 })
-export class HeaderComponent { 
+export class HeaderComponent {
 
     user$: Observable<User>;
 
     constructor(
-        private userService: UserService, 
-        private router:Router) {
+        private userService: UserService,
+        private router: Router) {
 
         this.user$ = userService.getUser();
     }
