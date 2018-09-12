@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 import { PlatformDetectorService } from '../../core/plataform-detector/platform-detector.service';
 
 @Component({
-    templateUrl: './signup.component.html'
+    templateUrl: './signup.component.html',
+    providers: [ UserNotTakenValidatorService ]
 })
 // tslint:disable-next-line:no-unused-expression
 export class SignUpComponent implements OnInit {
